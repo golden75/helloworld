@@ -23,6 +23,34 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
+```R
+# Load DESeq2 library
+library("DESeq2")
+
+# Set the working directory
+directory <- "~/Documents/R/DESeq2/"
+setwd(directory)
+
+# Set the prefix for each output file name
+outputPrefix <- "Listeria_DESeq2"
+
+# Location of deseq ready count table (EDGE-pro output)
+deseqFile <- "~/Documents/R/DESeq2/Listeria_deseqFile"
+
+# Read the table
+countData <- read.table(deseqFile, header = T)
+
+# Replace accession numbers with meaningful names
+names(countData) <- c("10403S Rep1","DsigB Rep1","10403S Rep2","DsigB Rep2")
+
+# Create table with treatment information
+sampleNames <- colnames(countData)
+sampleCondition <- c("10403S","DsigB","10403S","DsigB")
+colData <- data.frame(condition = sampleCondition)
+row.names(colData) = sampleNames
+treatments = c("10403S","DsigB")
+```
+
 [Link](url) and ![Image](src)
 ```
 
