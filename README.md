@@ -23,6 +23,10 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
+[Link](url) and ![Image](src)
+```
+
+
 ```R
 # Load DESeq2 library
 library("DESeq2")
@@ -51,8 +55,6 @@ row.names(colData) = sampleNames
 treatments = c("10403S","DsigB")
 ```
 
-[Link](url) and ![Image](src)
-```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
